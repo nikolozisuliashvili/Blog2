@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block title %}Blog Site{% endblock title %}
+
+{% block body %}
+
+<div class="jumbotron text-center">
+  <h1 class="display-3">Nikolozi Suliashvili</h1>
+  <p class="lead">
+    Here is my blog, Feel free to upload anything you wish here
+  </p>
+
+  {% if not session['loggedIn'] %}
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="/register" role="button"
+        >Register</a
+      >
+    </p>
+    <p class="lead">
+      <a class="btn btn-secondary" href="/login" role="button">Login</a>
+    </p>
+  {% endif %}
+</div>
+
+{% endblock body %}
